@@ -1,0 +1,67 @@
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+ENV/
+
+# ─── Jupyter ──────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ─── Model artifacts ──────────────────────────────────────────────────────────
+model/*.joblib
+model/*.pkl
+model/*.pth
+model/*.onnx
+# Keep evaluation output images in git if you want:
+# !model/confusion_matrix.png
+# !model/roc_curve.png
+
+# ─── Dataset ──────────────────────────────────────────────────────────────────
+# Exclude the actual images (usually too large for git)
+dataset/train/
+dataset/validation/
+dataset/test/
+# But keep the folder structure:
+!dataset/train/human/.gitkeep
+!dataset/train/ai/.gitkeep
+!dataset/validation/human/.gitkeep
+!dataset/validation/ai/.gitkeep
+!dataset/test/human/.gitkeep
+!dataset/test/ai/.gitkeep
+
+# ─── Node / Frontend ──────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# ─── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Editor ───────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
